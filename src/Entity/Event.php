@@ -16,7 +16,7 @@ class Event
     private ?int $id = null;
 
     #[ORM\ManyToOne(targetEntity: Source::class, inversedBy: 'events')]
-    #[ORM\JoinColumn(name: 'source_identifier', referencedColumnName: 'identifier', nullable: false)]
+    #[ORM\JoinColumn(nullable: false)]
     private Source $source;
 
     #[ORM\Column(type: 'bigint')]
