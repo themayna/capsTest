@@ -1,0 +1,8 @@
+services:
+  fpm:
+    container_name: capslock-fpm
+    build:
+      context: .
+      dockerfile: ./Docker/fpm/Dockerfile
+    volumes:
+      - ./:/var/www/html

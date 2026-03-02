@@ -1,0 +1,13 @@
+services:
+  nginx:
+    container_name: capslock_nginx
+    build:
+      context: .
+      dockerfile: ./Docker/nginx/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./public:/var/www/html/public/
+      - ./Docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - fpm
