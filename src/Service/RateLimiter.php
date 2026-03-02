@@ -12,7 +12,7 @@ final class RateLimiter implements RateLimiterInterface
     private const int INTERVAL_MS = 200;
 
     public function __construct(
-        private readonly \Memcached $cache,
+//        private readonly \Memcached $cache,
     )
     {
     }

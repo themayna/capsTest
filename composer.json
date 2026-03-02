@@ -21,6 +21,7 @@
         "symfony/yaml": "8.0.*"
     },
     "require-dev": {
+        "phpunit/phpunit": "*",
         "symfony/maker-bundle": "^1.66"
     },
     "config": {
