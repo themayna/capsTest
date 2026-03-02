@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\src\Service;
+namespace App\Service;
 
-use App\src\Contract\EventSourceInterface;
-use App\src\Contract\RateLimiterInterface;
-use App\src\Contract\EventSourceLoaderInterface;
-use App\src\Contract\EventSourceProcessor;
+use App\Contract\EventSourceInterface;
+use App\Contract\RateLimiterInterface;
+use App\Contract\EventSourceLoaderInterface;
+use App\Contract\EventSourceProcessor;
 use Symfony\Component\Lock\LockFactory;
 
 final readonly class EventSourceLoader implements EventSourceLoaderInterface

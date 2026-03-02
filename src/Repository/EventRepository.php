@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\src\Repository;
+namespace App\Repository;
 
-use App\src\Entity\Event;
+use App\Entity\Event;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

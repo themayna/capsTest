@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\src\Service;
+namespace App\Service;
 
-use App\src\Contract\EventStorageInterface;
-use App\src\Entity\Event;
-use App\src\Entity\Source;
+use App\Contract\EventStorageInterface;
+use App\Entity\Event;
+use App\Entity\Source;
 use Doctrine\ORM\EntityManagerInterface;
 
 final class EventStorage implements EventStorageInterface

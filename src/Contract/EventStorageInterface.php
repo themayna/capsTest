@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\src\Contract;
+namespace App\Contract;
 
-use App\src\Event\Event;
+use App\Event\Event;
 
 interface EventStorageInterface
 {

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Service;
 
 
-use App\src\Contract\RateLimiterInterface;
+use App\Contract\RateLimiterInterface;
 
 final class RateLimiter implements RateLimiterInterface
 {

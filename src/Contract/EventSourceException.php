@@ -2,8 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\src\Contract;
+namespace App\Contract;
 
-final class EventSourceException extends \RuntimeException
+use RuntimeException;
+
+final class EventSourceException extends RuntimeException
 {
+    public function __construct(string $message, ?\Throwable $previous = null)
+    {
+        parent::__construct($message, 0, $previous);
+    }
 }

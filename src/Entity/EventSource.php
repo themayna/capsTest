@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\src\Entity;
+namespace App\Entity;
 
-use App\src\Repository\EventSourceRepository;
+use App\Repository\EventSourceRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: EventSourceRepository::class)]

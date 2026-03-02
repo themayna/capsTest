@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\src\Service;
+namespace App\Service;
 
-use App\src\Contract\EventSourceFactoryInterface;
-use App\src\Contract\EventSourceInterface;
-use App\src\Entity\EventSource;
-use App\src\EventSource\CsvEventSource;
-use App\src\EventSource\HttpEventSource;
+use App\Contract\EventSourceFactoryInterface;
+use App\Contract\EventSourceInterface;
+use App\Entity\EventSource;
+use App\EventSource\CsvEventSource;
+use App\EventSource\HttpEventSource;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 final readonly class EventSourceFactory implements EventSourceFactoryInterface

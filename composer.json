@@ -12,6 +12,7 @@
         "doctrine/orm": "^3.6",
         "symfony/console": "8.0.*",
         "symfony/dotenv": "8.0.*",
+        "symfony/filesystem": "8.0.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "8.0.*",
         "symfony/http-client": "8.0.*",

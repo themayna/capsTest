@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\src\Service;
+namespace App\Service;
 
-use App\src\Contract\EventLoaderInterface;
-use App\src\Contract\EventSourceFactoryInterface;
-use App\src\Contract\EventSourceLoaderInterface;
-use App\src\Repository\EventSourceRepository;
+use App\Contract\EventLoaderInterface;
+use App\Contract\EventSourceFactoryInterface;
+use App\Contract\EventSourceLoaderInterface;
+use App\Repository\EventSourceRepository;
 
 final readonly class EventLoader implements EventLoaderInterface
 {

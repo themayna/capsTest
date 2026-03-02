@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\src\Entity;
+namespace App\Entity;
 
-use App\src\Repository\SourceRepository;
+use App\Repository\SourceRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;

@@ -2,7 +2,7 @@
 
 namespace App\Command;
 
-use App\src\Contract\EventLoaderInterface;
+use App\Service\EventLoader;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -14,7 +14,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 )]
 class EventLoaderRunCommand extends Command
 {
-    public function __construct(private readonly EventLoaderInterface $eventLoader)
+    public function __construct(private readonly EventLoader $eventLoader)
     {
         parent::__construct();
     }

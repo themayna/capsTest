@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\src\Service;
+namespace App\Service;
 
-use App\src\Contract\EventSourceException;
-use App\src\Contract\EventSourceInterface;
-use App\src\Contract\EventStorageInterface;
-use App\src\Contract\RateLimiterInterface;
-use App\src\Contract\EventSourceProcessor;
+use App\Contract\EventSourceException;
+use App\Contract\EventSourceInterface;
+use App\Contract\EventStorageInterface;
+use App\Contract\RateLimiterInterface;
+use App\Contract\EventSourceProcessor;
 use Psr\Log\LoggerInterface;
 
 final readonly class EventFetcher implements EventSourceProcessor
