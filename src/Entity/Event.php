@@ -15,8 +15,9 @@ class Event
     #[ORM\Column(type: 'bigint')]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
-    private string $sourceIdentifier;
+    #[ORM\ManyToOne(targetEntity: Source::class, inversedBy: 'events')]
+    #[ORM\JoinColumn(name: 'source_identifier', referencedColumnName: 'identifier', nullable: false)]
+    private Source $source;
 
     #[ORM\Column(type: 'bigint')]
     private int $sourceEventId;
@@ -35,14 +36,14 @@ class Event
         return $this->id;
     }
 
-    public function getSourceIdentifier(): string
+    public function getSource(): Source
     {
-        return $this->sourceIdentifier;
+        return $this->source;
     }
 
-    public function setSourceIdentifier(string $sourceIdentifier): self
+    public function setSource(Source $source): self
     {
-        $this->sourceIdentifier = $sourceIdentifier;
+        $this->source = $source;
         return $this;
     }
 

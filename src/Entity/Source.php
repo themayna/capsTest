@@ -25,9 +25,13 @@ class Source
     #[ORM\OneToMany(targetEntity: EventSource::class, mappedBy: 'source')]
     private Collection $eventSources;
 
+    #[ORM\OneToMany(targetEntity: Event::class, mappedBy: 'source')]
+    private Collection $events;
+
     public function __construct()
     {
         $this->eventSources = new ArrayCollection();
+        $this->events = new ArrayCollection();
     }
 
     public function getIdentifier(): string
@@ -70,5 +74,13 @@ class Source
     public function getEventSources(): Collection
     {
         return $this->eventSources;
+    }
+
+    /**
+     * @return Collection<int, Event>
+     */
+    public function getEvents(): Collection
+    {
+        return $this->events;
     }
 }

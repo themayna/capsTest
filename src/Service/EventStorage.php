@@ -19,22 +19,22 @@ final class EventStorage implements EventStorageInterface
 
     public function save(string $sourceIdentifier, array $events, int $lastEventId): void
     {
+        $source = $this->entityManager->find(Source::class, $sourceIdentifier);
+
+        if (!$source instanceof Source) {
+            throw new \InvalidArgumentException("Source '{$sourceIdentifier}' does not exist");
+        }
+
         /** @var \App\DTO\Event $eventDto */
         foreach ($events as $eventDto) {
             $event = (new Event())
-                ->setSourceIdentifier($sourceIdentifier)
+                ->setSource($source)
                 ->setSourceEventId($eventDto->getId())
                 ->setType($eventDto->getType())
                 ->setPayload($eventDto->getPayload())
                 ->setCreatedAt(new \DateTimeImmutable());
 
             $this->entityManager->persist($event);
-        }
-
-        $source = $this->entityManager->find(Source::class, $sourceIdentifier);
-
-        if (!$source instanceof Source) {
-            throw new \InvalidArgumentException("Source '{$sourceIdentifier}' does not exist");
         }
 
         $source->setLastEventId($lastEventId);
